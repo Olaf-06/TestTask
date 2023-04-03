@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SetPhotoAndNameFragment"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_black"
+        android:text="@string/app_name"
+        android:paddingStart="18dp"
+        android:paddingTop="39dp"
+        android:textColor="@color/white"
+        android:textSize="34.44sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="100"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvPhoto"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="30dp"
+                android:background="@color/black"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:elevation="-2dp">
+                <ImageButton
+                    android:id="@+id/imgBtnSetPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/camera"
+                    android:background="#282C31"/>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/IVPlus"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@drawable/plus"
+                android:background="@drawable/circle"
+                android:scaleType="centerInside"
+                android:layout_marginBottom="-6dp"
+                android:layout_marginRight="-6dp"
+                app:layout_constraintBottom_toBottomOf="@+id/cvPhoto"
+                app:layout_constraintEnd_toEndOf="@+id/cvPhoto"
+                android:elevation="2dp"/>
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/etFirstName"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button_dark"
+            android:fontFamily="@font/lato_bold"
+            android:paddingStart="20dp"
+            android:paddingTop="19dp"
+            android:paddingBottom="17dp"
+            android:layout_marginHorizontal="10dp"
+            android:hint="FIRST NAME"
+            android:textColorHint="#B3B3B3"
+            android:layout_gravity="bottom"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="140"
+        android:layout_marginTop="18dp">
+
+        <EditText
+            android:id="@+id/etLastName"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button_dark"
+            android:fontFamily="@font/lato_bold"
+            android:paddingStart="20dp"
+            android:paddingTop="19dp"
+            android:paddingBottom="17dp"
+            android:layout_marginHorizontal="10dp"
+            android:hint="LAST NAME"
+            android:textColorHint="#B3B3B3"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnConfirm"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button_gray"
+        android:fontFamily="@font/lato_bold"
+        android:paddingTop="19dp"
+        android:paddingBottom="17dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginHorizontal="10dp"
+        android:gravity="center"
+        android:text="CONFIRM"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:ignore="RtlSymmetry" />
+
+</LinearLayout>
